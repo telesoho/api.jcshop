@@ -26,7 +26,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
+        // 使用Passport
         Passport::routes();
-//        Passport::enableImplicitGrant();
     }
 }

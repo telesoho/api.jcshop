@@ -39,7 +39,8 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
-        //
+        // Client credential route mapping.
+        $this->mapClientCredentialRoutes();
     }
 
     /**
@@ -70,4 +71,19 @@ class RouteServiceProvider extends ServiceProvider
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
     }
+
+    /**
+     * Define the "capi" routes for the application.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapClientCredentialRoutes()
+    {
+        Route::prefix('capi')
+             ->middleware('client_credentials')
+             ->namespace($this->namespace)
+             ->group(base_path('routes/client_credentials.php'));
+    }    
 }

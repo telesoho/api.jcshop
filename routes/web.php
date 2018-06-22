@@ -15,12 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/TestDb', 'TestDb@index');
-
 if(env("APP_ENV", "") == 'local') {
     Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 }
-
-Route::get('/example', function () {
-    return view('example');
-});
