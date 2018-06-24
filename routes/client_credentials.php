@@ -1,14 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Controller;
 
 /**
  * 客户端凭据授权令牌路由定义
  */
 
-Route::middleware('client_credentials')->get('/testpass', function (Request $request) {
-    return response()->json([
-        'name' => 'Abigail',
-        'state' => 'CA'
-    ]);
-});
+Route::middleware('client_credentials')->get('/testpass', "TestDb@index");

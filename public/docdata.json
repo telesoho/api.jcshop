@@ -1,0 +1,13 @@
+{
+    "current_level": 1,
+    "machine_detail": {
+        "sn": "77777777",
+        "mode": "extreme"
+    },
+    "records": [
+        {
+            "time": "2017-03-28 00:00:00",
+            "message": "machine started"
+        }
+    ]
+}
